@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://46n8mxkf85td"]
+
+[ext_resource type="Texture2D" uid="uid://c3e2c7ybad6nl" path="res://assets/textures/blue_floral_wallpaper/blue_floral_low_res.jpg" id="1_nq5wa"]
+[ext_resource type="Texture2D" uid="uid://b3bdxl4x203m7" path="res://assets/textures/blue_floral_wallpaper/NormalMap.png" id="2_pok4j"]
+
+[resource]
+albedo_texture = ExtResource("1_nq5wa")
+normal_scale = 0.1
+normal_texture = ExtResource("2_pok4j")
+uv1_triplanar = true

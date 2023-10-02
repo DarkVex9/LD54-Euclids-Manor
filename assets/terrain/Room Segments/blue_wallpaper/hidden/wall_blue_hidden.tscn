@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bo4wwrp27w8y2"]
+
+[ext_resource type="Material" uid="uid://46n8mxkf85td" path="res://assets/materials/blue_wall.tres" id="1_0vdwc"]
+[ext_resource type="Material" uid="uid://cyw3d5lillu87" path="res://assets/materials/wood_detail.tres" id="2_0fk8d"]
+[ext_resource type="PackedScene" uid="uid://6veciuo8nf87" path="res://assets/terrain/Room Segments/Room Elements/beam_hidden.tscn" id="3_a6lub"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_074xx"]
+size = Vector3(2, 3, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nb2vj"]
+material = ExtResource("1_0vdwc")
+size = Vector3(2, 3, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kegsq"]
+material = ExtResource("2_0fk8d")
+size = Vector3(2, 1, 0.15)
+
+[node name="Wall_Blue_hidden" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_074xx")
+
+[node name="Wallpaper" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+layers = 2
+mesh = SubResource("BoxMesh_nb2vj")
+
+[node name="Wainscoting" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+layers = 2
+mesh = SubResource("BoxMesh_kegsq")
+
+[node name="Beam2" parent="." instance=ExtResource("3_a6lub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)

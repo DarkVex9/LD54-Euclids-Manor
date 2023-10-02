@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfss4phmthy32"]
+
+[ext_resource type="PackedScene" uid="uid://g03glscnyod4" path="res://assets/terrain/Room Segments/green_wallpaper/wall_green_seg.tscn" id="1_85lkf"]
+[ext_resource type="PackedScene" uid="uid://dgesob0i6p0p7" path="res://assets/terrain/Room Segments/green_wallpaper/wall_green.tscn" id="2_a7135"]
+
+[node name="Wall_Corner_Green_seg" type="Node3D"]
+
+[node name="Wall_Green_Seg" parent="." instance=ExtResource("1_85lkf")]
+
+[node name="Wall_black_Hidden" parent="." instance=ExtResource("2_a7135")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)

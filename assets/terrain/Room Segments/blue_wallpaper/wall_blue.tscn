@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://33jxnbmyfxl8"]
+
+[ext_resource type="Texture2D" uid="uid://c3e2c7ybad6nl" path="res://assets/textures/blue_floral_wallpaper/blue_floral_low_res.jpg" id="1_dnq5f"]
+[ext_resource type="Material" uid="uid://cyw3d5lillu87" path="res://assets/materials/wood_detail.tres" id="2_i8k4i"]
+[ext_resource type="Texture2D" uid="uid://b3bdxl4x203m7" path="res://assets/textures/blue_floral_wallpaper/NormalMap.png" id="2_yqx4c"]
+[ext_resource type="PackedScene" uid="uid://coxthtxsu0sp6" path="res://assets/terrain/Room Segments/Room Elements/beam.tscn" id="3_g1n2m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_074xx"]
+size = Vector3(2, 3, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xi726"]
+albedo_texture = ExtResource("1_dnq5f")
+normal_scale = 0.1
+normal_texture = ExtResource("2_yqx4c")
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_nb2vj"]
+material = SubResource("StandardMaterial3D_xi726")
+size = Vector3(2, 3, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kegsq"]
+material = ExtResource("2_i8k4i")
+size = Vector3(2, 1, 0.15)
+
+[node name="Wall_blue" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_074xx")
+
+[node name="Wallpaper" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = SubResource("BoxMesh_nb2vj")
+
+[node name="Wainscoting" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_kegsq")
+
+[node name="Beam" parent="." instance=ExtResource("3_g1n2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)

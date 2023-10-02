@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dumohbnutqvhn"]
+
+[ext_resource type="PackedScene" uid="uid://cdhfq4pu1b0no" path="res://assets/terrain/Props/wall_lamp.tscn" id="1_1m1cc"]
+[ext_resource type="PackedScene" uid="uid://dw7j18dbalxhu" path="res://assets/terrain/Room Segments/blue_wallpaper/wall_blue_seg.tscn" id="2_r2fsr"]
+
+[node name="Wall_Lamp_Blue_Seg" type="Node3D"]
+
+[node name="Wall_Lamp" parent="." instance=ExtResource("1_1m1cc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -1)
+
+[node name="Wall_Blue_Seg" parent="." instance=ExtResource("2_r2fsr")]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbumf7wgfw8"]
+
+[ext_resource type="PackedScene" uid="uid://coxthtxsu0sp6" path="res://assets/terrain/Room Segments/Room Elements/beam.tscn" id="1_ll2i5"]
+[ext_resource type="PackedScene" uid="uid://dsxy2xornnsdo" path="res://assets/terrain/Room Segments/black_wallpaper/wall_black_seg.tscn" id="2_eusg6"]
+
+[node name="Wall_Capped_Seg" type="Node3D"]
+
+[node name="Beam" parent="." instance=ExtResource("1_ll2i5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.1, -1)
+
+[node name="Wall_Seg" parent="." instance=ExtResource("2_eusg6")]

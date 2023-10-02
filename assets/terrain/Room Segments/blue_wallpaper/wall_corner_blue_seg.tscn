@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://xmk2o4pi0dh7"]
+
+[ext_resource type="PackedScene" uid="uid://dw7j18dbalxhu" path="res://assets/terrain/Room Segments/blue_wallpaper/wall_blue_seg.tscn" id="1_n2nt8"]
+[ext_resource type="PackedScene" uid="uid://33jxnbmyfxl8" path="res://assets/terrain/Room Segments/blue_wallpaper/wall_blue.tscn" id="2_r0ws0"]
+
+[node name="Wall_Corner_Blue_seg" type="Node3D"]
+
+[node name="Wall_Blue_Seg" parent="." instance=ExtResource("1_n2nt8")]
+
+[node name="Wall_blue" parent="." instance=ExtResource("2_r0ws0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0)

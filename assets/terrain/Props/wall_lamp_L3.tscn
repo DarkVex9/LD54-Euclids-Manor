@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1f225ea6qw8m"]
+
+[ext_resource type="PackedScene" uid="uid://cpwfloua1suj6" path="res://assets/models/unity lamp/Lamp_02.gltf" id="1_nxeh2"]
+
+[node name="Wall_Lamp_L3" instance=ExtResource("1_nxeh2")]
+
+[node name="Lamp_022" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.05)
+layers = 4
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.343, 0.4)
+layers = 4
+light_color = Color(1, 0.886275, 0.658824, 1)

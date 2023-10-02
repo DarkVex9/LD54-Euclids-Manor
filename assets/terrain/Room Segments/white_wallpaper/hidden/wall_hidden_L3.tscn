@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://c2nh1sd68xc6q"]
+
+[ext_resource type="Material" uid="uid://0muwowqssc07" path="res://assets/materials/wallpaper.tres" id="1_q1qgi"]
+[ext_resource type="Material" uid="uid://cyw3d5lillu87" path="res://assets/materials/wood_detail.tres" id="2_bhd4m"]
+[ext_resource type="Material" uid="uid://b6d760prytrbv" path="res://assets/materials/wood.tres" id="3_qpem8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_074xx"]
+size = Vector3(2, 3, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nb2vj"]
+material = ExtResource("1_q1qgi")
+size = Vector3(2, 3, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kegsq"]
+material = ExtResource("2_bhd4m")
+size = Vector3(2, 1, 0.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pj4s3"]
+size = Vector3(0.3, 3, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_klyu8"]
+material = ExtResource("3_qpem8")
+size = Vector3(0.3, 3, 0.3)
+
+[node name="Wall_Hidden" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_074xx")
+
+[node name="Wallpaper" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+layers = 4
+mesh = SubResource("BoxMesh_nb2vj")
+
+[node name="Wainscoting" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+layers = 4
+mesh = SubResource("BoxMesh_kegsq")
+
+[node name="Beam" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Beam"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Beam/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_pj4s3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Beam"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+layers = 4
+mesh = SubResource("BoxMesh_klyu8")

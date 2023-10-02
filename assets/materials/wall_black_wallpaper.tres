@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cvep6xlgdbl48"]
+
+[ext_resource type="Texture2D" uid="uid://dyvapg0pypiy5" path="res://assets/textures/black_wallpaper/black_wallpaper_lowres.jpg" id="1_mxhnw"]
+
+[resource]
+albedo_texture = ExtResource("1_mxhnw")
+uv1_triplanar = true

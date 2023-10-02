@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmoqnhvt0lj5r"]
+
+[ext_resource type="Material" uid="uid://0muwowqssc07" path="res://assets/materials/wallpaper.tres" id="1_mlfac"]
+[ext_resource type="PackedScene" uid="uid://coxthtxsu0sp6" path="res://assets/terrain/Room Segments/Room Elements/beam.tscn" id="2_16vom"]
+[ext_resource type="PackedScene" uid="uid://o3to0gpqchuf" path="res://assets/terrain/Room Segments/Room Elements/ceiling_beam.tscn" id="3_j2aaw"]
+[ext_resource type="PackedScene" uid="uid://bd6ufoi2xj41x" path="res://assets/terrain/Room Segments/empty_tall_seg.tscn" id="4_dug4n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pqr6u"]
+material = ExtResource("1_mlfac")
+size = Vector3(2, 3, 0.1)
+
+[node name="Wall_Tall_Doorway_Seg" type="Node3D"]
+
+[node name="Wallpaper" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, -1)
+mesh = SubResource("BoxMesh_pqr6u")
+skeleton = NodePath("")
+
+[node name="Beam2" parent="." instance=ExtResource("2_16vom")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 3, -1)
+
+[node name="Beam3" parent="." instance=ExtResource("2_16vom")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+
+[node name="Beam4" parent="." instance=ExtResource("3_j2aaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -1)
+
+[node name="Empty_Tall_Seg" parent="." instance=ExtResource("4_dug4n")]

@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://bs6py863ohqon"]
+
+[ext_resource type="Material" uid="uid://b68unyu4s45hh" path="res://assets/materials/copper_clean.tres" id="1_ge1uj"]
+[ext_resource type="Material" uid="uid://cwvq4fpudmjur" path="res://assets/materials/copper_dirty.tres" id="2_n1yoa"]
+[ext_resource type="PackedScene" uid="uid://coxthtxsu0sp6" path="res://assets/terrain/Room Segments/Room Elements/beam.tscn" id="3_84ck1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_074xx"]
+size = Vector3(2, 3, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nb2vj"]
+material = ExtResource("1_ge1uj")
+size = Vector3(2, 3, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kegsq"]
+material = ExtResource("2_n1yoa")
+size = Vector3(2, 1, 0.15)
+
+[node name="Wall_Copper" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_074xx")
+
+[node name="Wallpaper" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = SubResource("BoxMesh_nb2vj")
+
+[node name="Wainscoting" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_kegsq")
+
+[node name="Beam" parent="." instance=ExtResource("3_84ck1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+visible = false

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://y2bkmu83qs33"]
+
+[ext_resource type="Script" path="res://assets/terrain/portal.gd" id="1_loocm"]
+[ext_resource type="Material" uid="uid://pe5no8afr6er" path="res://assets/materials/portal.tres" id="2_w4oaf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ovkof"]
+resource_local_to_scene = true
+size = Vector3(1, 2, 0.001)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_atfis"]
+radius = 0.25
+height = 0.75
+
+[node name="Portal" type="Node3D"]
+script = ExtResource("1_loocm")
+
+[node name="Portal_Surface" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = ExtResource("2_w4oaf")
+mesh = SubResource("BoxMesh_ovkof")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+gui_disable_input = true
+size = Vector2i(1024, 1024)
+
+[node name="PortalCamera" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewport/PortalCamera"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_atfis")

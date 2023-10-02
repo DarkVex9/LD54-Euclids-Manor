@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq3obfm0bntik"]
+
+[ext_resource type="PackedScene" uid="uid://drw6m6b0o1cd5" path="res://assets/terrain/Room Segments/Floors-Ceilings/floor.tscn" id="1_54xxk"]
+[ext_resource type="PackedScene" uid="uid://clnkfdyfuvb45" path="res://assets/terrain/Room Segments/Floors-Ceilings/ceiling_tile.tscn" id="2_c6qid"]
+[ext_resource type="PackedScene" uid="uid://w0bg8m7yku75" path="res://assets/terrain/Room Segments/white_wallpaper/hidden/wall_hidden.tscn" id="3_s5no8"]
+
+[node name="Wall_Seg_Hidden" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_54xxk")]
+
+[node name="Ceiling_Tile" parent="." instance=ExtResource("2_c6qid")]
+
+[node name="Wall_Hidden" parent="." instance=ExtResource("3_s5no8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)

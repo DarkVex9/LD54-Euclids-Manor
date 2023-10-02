@@ -1,0 +1,39 @@
+Ludum Dare 54 Credits
+
+
+=== Textures ===
+
+AmbientCG
+  https://ambientcg.com/view?id=WoodFloor025
+  https://ambientcg.com/view?id=Wallpaper001A
+  https://ambientcg.com/view?id=Wood027
+  https://ambientcg.com/view?id=Wood084B
+  https://ambientcg.com/view?id=Tiles089
+
+  https://ambientcg.com/view?id=Metal047A
+
+Freepik
+  https://www.freepik.com/free-vector/damask-seamless-pattern-background_18454007.htm
+  https://www.freepik.com/free-vector/damask-seamless-emboss-pattern-background-vector-classical-luxury-old-damask-ornament-royal-victorian-seamless-texture-wallpapers-textile-wrapping-vintage-exquisite-floral-baroque-template_27449679.htm
+  https://www.freepik.com/free-vector/vector-volumetric-damask-seamless-pattern-background-elegant-luxury-embossed-texture-wallpapers-backgrounds-page-fill-3d-elements-with-shadows-highlights_26502819.htm
+  
+
+
+
+=== Models ===
+
+Lamp (Dungeon Pack) - https://assetstore.unity.com/packages/3d/environments/stylized-hand-painted-dungeon-free-173934
+
+Table & Chairs - https://assetstore.unity.com/packages/3d/props/furniture/table-with-chairs-x3-free-101246
+
+Red Plush Chair - https://assetstore.unity.com/packages/3d/props/furniture/old-classical-chair-46865
+
+Cabinet - https://assetstore.unity.com/packages/3d/props/furniture/old-wooden-cabinet-106249
+
+
+
+=== Tools ===
+
+UnityGLTF - https://github.com/prefrontalcortex/UnityGLTF
+
+Normal Map Generator - https://cpetry.github.io/NormalMap-Online/

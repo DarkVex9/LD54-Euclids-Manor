@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0h70dd8q1a5j"]
+
+[ext_resource type="Material" uid="uid://cwvq4fpudmjur" path="res://assets/materials/copper_dirty.tres" id="1_b7mtf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pj4s3"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_klyu8"]
+material = ExtResource("1_b7mtf")
+size = Vector3(2, 0.21, 2)
+
+[node name="Portal_Floor" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+shape = SubResource("BoxShape3D_pj4s3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.1, 0)
+mesh = SubResource("BoxMesh_klyu8")

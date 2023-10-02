@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b033ifm0anyak"]
+
+[ext_resource type="PackedScene" uid="uid://drw6m6b0o1cd5" path="res://assets/terrain/Room Segments/Floors-Ceilings/floor.tscn" id="1_mulrt"]
+[ext_resource type="PackedScene" uid="uid://clnkfdyfuvb45" path="res://assets/terrain/Room Segments/Floors-Ceilings/ceiling_tile.tscn" id="2_s2ljt"]
+
+[node name="Empty_Seg" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_mulrt")]
+
+[node name="Ceiling_Tile" parent="." instance=ExtResource("2_s2ljt")]

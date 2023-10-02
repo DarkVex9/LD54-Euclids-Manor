@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://dpryf6app57to"]
+
+[ext_resource type="Script" path="res://assets/terrain/portal.gd" id="1_tlvon"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ovkof"]
+resource_local_to_scene = true
+size = Vector3(1, 2, 0.001)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cs00q"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_atfis"]
+material = SubResource("StandardMaterial3D_cs00q")
+radius = 0.25
+height = 0.75
+
+[sub_resource type="SphereMesh" id="SphereMesh_efn28"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pejlf"]
+size = Vector3(1, 2, 0.5)
+
+[node name="Portal" type="Node3D"]
+script = ExtResource("1_tlvon")
+
+[node name="Portal_Surface" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+layers = 2
+cast_shadow = 0
+mesh = SubResource("BoxMesh_ovkof")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+gui_disable_input = true
+size = Vector2i(1024, 1024)
+
+[node name="Destination_Marker" type="Node3D" parent="SubViewport"]
+
+[node name="PortalCamera" type="Camera3D" parent="SubViewport/Destination_Marker"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+cull_mask = 1048573
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewport/Destination_Marker/PortalCamera"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_atfis")
+
+[node name="Visualize_Destination" type="MeshInstance3D" parent="SubViewport/Destination_Marker"]
+mesh = SubResource("SphereMesh_efn28")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_pejlf")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

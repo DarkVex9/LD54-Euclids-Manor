@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://mr3p6xketg8q"]
+
+[ext_resource type="Texture2D" uid="uid://cuw1jqubuxwsb" path="res://assets/textures/stone_bricks/Tiles089_1K-JPG_Color.jpg" id="1_r8l7c"]
+[ext_resource type="Texture2D" uid="uid://dvipvy43dtxlb" path="res://assets/textures/stone_bricks/Tiles089_1K-JPG_AmbientOcclusion.jpg" id="2_idvln"]
+[ext_resource type="Texture2D" uid="uid://bt6eud2hevpir" path="res://assets/textures/stone_bricks/Tiles089_1K-JPG_NormalGL.jpg" id="3_38a3u"]
+[ext_resource type="Texture2D" uid="uid://6w6jpefxx0hx" path="res://assets/textures/stone_bricks/Tiles089_1K-JPG_Roughness.jpg" id="4_27oqx"]
+
+[resource]
+albedo_texture = ExtResource("1_r8l7c")
+roughness_texture = ExtResource("4_27oqx")
+normal_enabled = true
+normal_scale = 1.5
+normal_texture = ExtResource("3_38a3u")
+ao_texture = ExtResource("2_idvln")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://f0fwuinl0iu0"]
+
+[ext_resource type="PackedScene" uid="uid://ciy5ofwxr0nu4" path="res://assets/models/ClassicKitchenChair.fbx" id="1_54l6c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fl0cp"]
+size = Vector3(0.464, 0.5, 0.53)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w751t"]
+size = Vector3(0.464, 1.2, 0.101135)
+
+[node name="Kitchen_Chair" type="Node3D"]
+
+[node name="ClassicKitchenChair" parent="." instance=ExtResource("1_54l6c")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("BoxShape3D_fl0cp")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -0.225603)
+shape = SubResource("BoxShape3D_w751t")

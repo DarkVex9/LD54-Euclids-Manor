@@ -1,0 +1,231 @@
+{
+  "asset": {
+    "generator": "UnityGLTF",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "KHR_texture_transform"
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "Lamp_02"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 562,
+      "type": "VEC3",
+      "max": [
+        0.11328685283660889,
+        0.12165725231170654,
+        0.46507254242897034
+      ],
+      "min": [
+        -0.11512058973312378,
+        -0.47846689820289612,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 562,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 562,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.743472158908844,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 562,
+      "type": "VEC2",
+      "max": [
+        0.98940539360046387,
+        0.99405103921890259
+      ],
+      "min": [
+        0.0083778016269207,
+        0.64812773466110229
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 562,
+      "type": "VEC2",
+      "max": [
+        0.99512577056884766,
+        0.99609375
+      ],
+      "min": [
+        0.00390625,
+        0.0076406598091125488
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5123,
+      "count": 1050,
+      "type": "SCALAR",
+      "max": [
+        561.0
+      ],
+      "min": [
+        0.0
+      ]
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "Lamp_02.bin",
+      "byteLength": 33572
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 6744,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 6744,
+      "byteLength": 6744,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 13488,
+      "byteLength": 8992,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 22480,
+      "byteLength": 4496,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 26976,
+      "byteLength": 4496,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 31472,
+      "byteLength": 2100,
+      "target": 34963
+    }
+  ],
+  "images": [
+    {
+      "uri": "Dungeon_02_Emission.jpg",
+      "name": "Dungeon_02_Emission"
+    },
+    {
+      "uri": "Dungeon_02_Diffuse.jpg",
+      "name": "Dungeon_02_Diffuse"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1,
+          "extensions": {
+            "KHR_texture_transform": {}
+          }
+        },
+        "metallicFactor": 0.0
+      },
+      "emissiveTexture": {
+        "index": 0,
+        "extensions": {
+          "KHR_texture_transform": {}
+        }
+      },
+      "emissiveFactor": [
+        1.0,
+        0.304987371,
+        0.03189603
+      ],
+      "name": "Dungeon_Mat_02"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4
+          },
+          "indices": 5,
+          "material": 0
+        }
+      ],
+      "name": "Lamp_02"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Lamp_02"
+    }
+  ],
+  "samplers": [
+    {
+      "minFilter": 9729
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "Dungeon_02_Emission"
+    },
+    {
+      "sampler": 0,
+      "source": 1,
+      "name": "Dungeon_02_Diffuse"
+    }
+  ]
+}

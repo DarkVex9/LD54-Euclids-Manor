@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://pe5no8afr6er"]
+
+[ext_resource type="Shader" path="res://assets/terrain/portal.gdshader" id="1_5yj5n"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_5yj5n")
